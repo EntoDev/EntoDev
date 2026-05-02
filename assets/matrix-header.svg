@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="220" viewBox="0 0 1000 220">
+  <defs>
+    <style>
+      /* Animaciones de lluvia de código */
+      @keyframes fall1 { 0% { opacity: 0; transform: translateY(-20px); } 10% { opacity: 1; } 90% { opacity: 1; } 100% { opacity: 0; transform: translateY(20px); } }
+      @keyframes fall2 { 0% { opacity: 0; transform: translateY(-30px); } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; transform: translateY(30px); } }
+      @keyframes fall3 { 0% { opacity: 0; transform: translateY(-10px); } 20% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; transform: translateY(10px); } }
+      @keyframes blink { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      /* Efecto máquina de escribir */
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      @keyframes blink-cursor {
+        from, to { border-right-color: transparent; }
+        50% { border-right-color: #00ff41; }
+      }
+      .matrix-code {
+        font-family: 'Courier New', monospace;
+        font-size: 13px;
+        fill: #00ff41;
+      }
+      .dim { fill: #008f11; }
+      .bright { fill: #aaffaa; font-weight: bold; }
+      .fall-1 { animation: fall1 4s linear infinite; }
+      .fall-2 { animation: fall2 5s linear infinite 1s; }
+      .fall-3 { animation: fall3 3.5s linear infinite 0.5s; }
+      .blink { animation: blink 1.5s ease-in-out infinite; }
+      
+      /* Estilo para el título y subtítulos */
+      .title {
+        font-family: 'Courier New', 'Fira Code', monospace;
+        fill: #00ff41;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .typewriter {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(24, end) forwards;
+        border-right: 2px solid #00ff41;
+      }
+    </style>
+  </defs>
+  
+  <!-- Fondo negro -->
+  <rect width="100%" height="100%" fill="#0a0f0a"/>
+  
+  <!-- === MATRIX CODE RAIN (fondo) === -->
+  <g class="matrix-code">
+    <!-- Columna 1: bits -->
+    <text x="2%" class="fall-1">01001</text>
+    <text x="2%" y="40" class="fall-2">11010</text>
+    <text x="2%" y="80" class="fall-3">10101</text>
+    <text x="2%" y="120" class="fall-1">00110</text>
+    <text x="2%" y="160" class="fall-2">11100</text>
+    <text x="2%" y="200" class="fall-3">00011</text>
+    
+    <!-- Columna 2: HTML/XML -->
+    <text x="10%" class="fall-2">&lt;div&gt;</text>
+    <text x="10%" y="45" class="fall-3">&lt;/&gt;</text>
+    <text x="10%" y="85" class="fall-1">&lt;html&gt;</text>
+    <text x="10%" y="125" class="fall-2">class=</text>
+    <text x="10%" y="165" class="fall-3">id="root"</text>
+    
+    <!-- Columna 3: JavaScript -->
+    <text x="19%" class="fall-3">const</text>
+    <text x="19%" y="30" class="fall-1">let</text>
+    <text x="19%" y="60" class="fall-2">function()</text>
+    <text x="19%" y="90" class="fall-3">{ }</text>
+    <text x="19%" y="120" class="fall-1">=&gt;</text>
+    <text x="19%" y="150" class="fall-2">map()</text>
+    <text x="19%" y="180" class="fall-3">filter</text>
+    
+    <!-- Columna 4: Bash -->
+    <text x="29%" class="fall-1">#!/bin/bash</text>
+    <text x="29%" y="35" class="fall-2">sudo su</text>
+    <text x="29%" y="65" class="fall-3">chmod +x</text>
+    <text x="29%" y="95" class="fall-1">echo $PATH</text>
+    <text x="29%" y="125" class="fall-2">grep -r</text>
+    <text x="29%" y="155" class="fall-3">awk '{print}'</text>
+    
+    <!-- Columna 5: SQL -->
+    <text x="40%" class="fall-2">SELECT *</text>
+    <text x="40%" y="30" class="fall-3">FROM users</text>
+    <text x="40%" y="60" class="fall-1">WHERE id=1</text>
+    <text x="40%" y="90" class="fall-2">INSERT INTO</text>
+    <text x="40%" y="120" class="fall-3">DROP TABLE</text>
+    <text x="40%" y="150" class="fall-1">JOIN</text>
+    
+    <!-- Columna 6: Docker/DevOps -->
+    <text x="52%" class="fall-3">docker run</text>
+    <text x="52%" y="40" class="fall-1">-p 80:80</text>
+    <text x="52%" y="70" class="fall-2">nginx</text>
+    <text x="52%" y="100" class="fall-3">curl -X GET</text>
+    <text x="52%" y="130" class="fall-1">kubectl</text>
+    <text x="52%" y="160" class="fall-2">helm</text>
+    
+    <!-- Columna 7: Git -->
+    <text x="64%" class="fall-1">git commit</text>
+    <text x="64%" y="35" class="fall-2">git push</text>
+    <text x="64%" y="65" class="fall-3">git merge</text>
+    <text x="64%" y="95" class="fall-1">rebase</text>
+    <text x="64%" y="125" class="fall-2">clone</text>
+    <text x="64%" y="155" class="fall-3">stash</text>
+    
+    <!-- Columna 8: Símbolos -->
+    <text x="76%" class="fall-2">{ }</text>
+    <text x="76%" y="30" class="fall-1">( )</text>
+    <text x="76%" y="60" class="fall-3">[ ]</text>
+    <text x="76%" y="90" class="fall-2">&lt; &gt;</text>
+    <text x="76%" y="120" class="fall-1">! =</text>
+    <text x="76%" y="150" class="fall-3">== =</text>
+    
+    <!-- Columna 9: Keywords -->
+    <text x="86%" class="fall-3">if</text>
+    <text x="86%" y="40" class="fall-1">else</text>
+    <text x="86%" y="70" class="fall-2">for</text>
+    <text x="86%" y="100" class="fall-3">while</text>
+    <text x="86%" y="130" class="fall-1">break</text>
+    <text x="86%" y="160" class="fall-2">continue</text>
+    
+    <!-- Columna 10: Código extra -->
+    <text x="94%" class="fall-1">0x4A</text>
+    <text x="94%" y="25" class="fall-2">0xF2</text>
+    <text x="94%" y="55" class="fall-3">0xE1</text>
+    <text x="94%" y="85" class="fall-1">0x0D</text>
+    <text x="94%" y="115" class="fall-2">~</text>
+    <text x="94%" y="145" class="fall-3">%</text>
+  </g>
+  
+  <!-- Caracteres brillantes intermitentes -->
+  <g class="matrix-code bright blink">
+    <text x="7%" y="55">1</text>
+    <text x="7%" y="110">0</text>
+    <text x="15%" y="25">></text>
+    <text x="15%" y="80"><</text>
+    <text x="25%" y="45">;</text>
+    <text x="25%" y="140">'</text>
+    <text x="35%" y="110">#</text>
+    <text x="48%" y="85">*</text>
+    <text x="48%" y="150">/</text>
+    <text x="60%" y="55">+</text>
+    <text x="60%" y="115">-</text>
+    <text x="72%" y="20">_</text>
+    <text x="72%" y="85">$</text>
+    <text x="82%" y="60">@</text>
+    <text x="92%" y="95">?</text>
+  </g>
+  
+  <!-- === TEXTO PRINCIPAL (encima) === -->
+  
+  <!-- Caja semitransparente para mejorar la legibilidad (totalmente opcional, pero ayuda) -->
+  <rect x="10%" y="30%" width="80%" height="40%" fill="#0a0f0a" opacity="0.7" rx="10" ry="10"/>
+  
+  <!-- Nombre con efecto typewriter (simulado mediante texto animado y cursor) -->
+  <text x="50%" y="37%" class="title" font-size="38" font-weight="bold" letter-spacing="2">
+    <tspan>
+      Jordi Enrich Tomas
+      <animate attributeName="opacity" values="1;1;0;1" dur="4s" repeatCount="indefinite" />
+    </tspan>
+  </text>
+  <!-- Cursor parpadeante (línea vertical) -->
+  <rect x="69%" y="30%" width="3" height="30" fill="#00ff41">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- @EntoDev -->
+  <text x="50%" y="55%" class="title" font-size="22" fill="#aaffaa">
+    @EntoDev
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" />
+  </text>
+  
+  <!-- Subtítulo SysAdmin ... -->
+  <text x="50%" y="68%" class="title" font-size="18" fill="#00ff41" opacity="0.9">
+    SysAdmin &amp; Full Stack Developer | ASIR Graduate 🚀
+  </text>
+</svg>
