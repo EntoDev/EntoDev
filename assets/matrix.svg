@@ -1,0 +1,12 @@
+# Clona el repositorio (si no lo tienes)
+git clone https://github.com/EntoDev/EntoDev.git
+cd EntoDev
+
+# Crea la carpeta y el archivo
+mkdir -p assets
+nano assets/matrix.svg   # o usa el editor que prefieras
+
+# Añade el contenido, guarda y luego:
+git add assets/matrix.svg
+git commit -m "Añadir animación Matrix"
+git push origin main
